@@ -42,9 +42,12 @@
 struct bcm2835_mbox_regs {
 	u32 read;
 	u32 rsvd0[5];
-	u32 status;
-	u32 config;
+	u32 status_r;
+	u32 config_r;
 	u32 write;
+	u32 rsvd1[5];
+	u32 status_w;
+	u32 config_w;
 };
 
 #define BCM2835_MBOX_STATUS_WR_FULL	0x80000000
